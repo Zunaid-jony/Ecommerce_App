@@ -17,3 +17,15 @@ header a {
   font-weight: bold;
   text-decoration: none;
 }
+.products{
+  display: flex;
+  flex-wrap: wrap;
+}
+.product{
+  border: 1px #404040 solid;
+  margin: 2px;
+}
+.product img{
+  width: 100%;
+  height: 400px;
+}
