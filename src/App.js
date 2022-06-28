@@ -1,12 +1,18 @@
+import { BrowserRouter, Route, Routes } from "react-router-dom";
 import data from "./data";
+import HomeScreen from "./screens/HomeScreen";
 
 function App() {
   return (
+    <BrowserRouter>
     <div>
       <header>
         <a href="/">E-commarce</a>
       </header>
       <main>
+        <Routes>
+          <Route path="/" element={<HomeScreen></HomeScreen>}></Route>
+        </Routes>
         <h1>Featured Products</h1>
         {/* products */}
 
@@ -14,14 +20,24 @@ function App() {
           {data.products.map((product) => (
             <div className="product"
              key={product.slug}>
+
+               <a href={`/product/${product.slug}`}> 
               <img src={product.image} alt={product.name}></img>
-              <p> {product.name} </p>
-              <p> $ {product.price} </p>
+              </a>
+             <div className="product-info">
+             <a href={`/product/${product.slug}`}> 
+                <p> {product.name} </p>
+
+             </a>
+                <p> <strong> $ {product.price}</strong> </p>
+                <button>Add to Cart</button>
+             </div>
             </div>
           ))}
         </div>
       </main>
     </div>
+    </BrowserRouter>
   );
 }
 
