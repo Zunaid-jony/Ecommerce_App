@@ -18,6 +18,7 @@ header a {
   text-decoration: none;
   
 }
+
 .products{
   display: flex;
   flex-wrap: wrap;
