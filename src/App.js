@@ -24,7 +24,7 @@ function App() {
       <Container>
       <Routes>
           <Route path="/" element={<HomeScreen></HomeScreen>}></Route>
-          <Route path="/product/:slug" element={<ProductScreen></ProductScreen>}></Route>
+          <Route path="/product/:slug" element={<ProductScreen ></ProductScreen>}></Route>
         </Routes>
       </Container>
 
