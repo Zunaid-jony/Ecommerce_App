@@ -6,8 +6,14 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
+.site-container{
+  min-height: 100vh;
+}
+main{
+ flex: 1;
+}
 
-header{
+/* header{
   background-color: #404040;
   padding: 1rem;
 
@@ -17,7 +23,7 @@ header a {
   font-weight: bold;
   text-decoration: none;
   
-}
+} */
 
 .products{
   display: flex;
@@ -36,7 +42,7 @@ header a {
 }
 .product img{
   width: 100%;
-  height: 350px;
+  height: 321px;
 }
 .product-info{
   padding: 6px;
