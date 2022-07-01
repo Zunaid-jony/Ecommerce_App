@@ -2,7 +2,7 @@ import { useParams } from "react-router-dom";
 import { useEffect } from "react";
 import axios from "axios";
 import { useReducer } from "react";
-import { Badge, Button, Col, Row } from "react-bootstrap";
+import { Badge, Button, Col, Row, Spinner } from "react-bootstrap";
 import Rating from "../components/Rating";
 import { Helmet } from "react-helmet-async";
 // npm install react-helmet-async
@@ -49,7 +49,7 @@ const ProductScreen = () => {
   }, [slug]);
 
   return loading ? (
-    <div>Loading..</div>
+    <div><Spinner animation="border" /></div>
   ) : error ? (
     <div>{error}</div>
   ) : (

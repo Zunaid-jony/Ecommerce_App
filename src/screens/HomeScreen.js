@@ -1,6 +1,6 @@
 import axios from "axios";
 import React, { useEffect, useReducer } from "react";
-import {  Col, Row } from "react-bootstrap";
+import {  Col, Row, Spinner } from "react-bootstrap";
 import { Helmet } from "react-helmet-async";
 
 import logger from "use-reducer-logger";
@@ -52,9 +52,11 @@ const HomeScreen = () => {
      
       <div className="products">
         {loading ? (
-          <div> Loading...</div>
+          // add to spinner
+          <div> <Spinner animation="border" /></div>
         ) : error ? (
-          <div> {error}</div>
+          <div> 
+            {error}</div>
         ) : (
           <Row>
             {products.map((product) => (
