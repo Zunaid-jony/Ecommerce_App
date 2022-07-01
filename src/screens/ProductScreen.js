@@ -4,6 +4,8 @@ import axios from "axios";
 import { useReducer } from "react";
 import { Badge, Button, Col, Row } from "react-bootstrap";
 import Rating from "../components/Rating";
+import { Helmet } from "react-helmet-async";
+// npm install react-helmet-async
 
 const reducer = (state, action) => {
   switch (action.type) {
@@ -51,7 +53,7 @@ const ProductScreen = () => {
   ) : error ? (
     <div>{error}</div>
   ) : (
-    <div>
+    <div className="margin-top">
       <Row>
         <Col sm={6} md={8} >
           <img
@@ -67,7 +69,11 @@ const ProductScreen = () => {
             rating={product.rating}
 
           </Rating>
+          <Helmet>
+            <title>{product.name}</title>
+          </Helmet>
           <h4>{product.name}</h4>
+
           <p>$ {product.price}  </p>
           {/* stock  */}
           
