@@ -19,7 +19,7 @@ function App() {
     <BrowserRouter>
     <div className="d-flex flex-column  site-container">
       <header>
-        <Navbar  variant="dark" style={{backgroundColor:'#f2f2f2'}}>
+        <Navbar  variant="dark" style={{backgroundColor:'#4C4646'}}>
           <Container>
             <LinkContainer to="/">
               <Navbar.Brand>E-commarce </Navbar.Brand>
