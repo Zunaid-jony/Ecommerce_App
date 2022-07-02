@@ -1,10 +1,11 @@
 import { useParams } from "react-router-dom";
-import { useEffect } from "react";
+import { useContext, useEffect } from "react";
 import axios from "axios";
 import { useReducer } from "react";
 import { Badge, Button, Col, Row, Spinner } from "react-bootstrap";
 import Rating from "../components/Rating";
 import { Helmet } from "react-helmet-async";
+import { Store } from './../Store';
 // npm install react-helmet-async
 
 const reducer = (state, action) => {
@@ -47,6 +48,15 @@ const ProductScreen = () => {
     };
     fetchData();
   }, [slug]);
+  const {state, dispatch: ctxDispatch} = useContext(Store);
+
+  const addToCartHandler = () =>{
+    ctxDispatch({
+      type: 'CART_ADD_ITEM',
+      payload: {...product, quantity: 1},
+    })
+
+  }
 
   return loading ? (
     <div><Spinner animation="border" /></div>
@@ -90,7 +100,7 @@ const ProductScreen = () => {
           <br></br>
           {
              product.countInStock > 0 &&
-             <Button style={{width:'180px'}} variant="primary">Add to Card</Button>
+             <Button onClick={addToCartHandler} style={{width:'180px'}} variant="primary">Add to Card</Button>
           }
 
 
