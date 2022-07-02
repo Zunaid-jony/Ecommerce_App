@@ -10,6 +10,7 @@ import Home from './components/Home';
 import { useContext } from 'react';
 import { Store } from './Store';
 import CartScreen from './screens/CartScreen';
+import Footer from "./Footer/Footer";
 
 
 function App() {
@@ -53,6 +54,7 @@ function App() {
           <Route path="/product/:slug" element={<ProductScreen ></ProductScreen>}></Route>
         </Routes>
       </Container>
+      <Footer></Footer>
 
         
       </main>
