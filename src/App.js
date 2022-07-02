@@ -9,6 +9,7 @@ import Home from './components/Home';
 
 import { useContext } from 'react';
 import { Store } from './Store';
+import CartScreen from './screens/CartScreen';
 
 
 function App() {
@@ -48,6 +49,7 @@ function App() {
       <Routes>
           {/* <Route path="/" element={<HomeScreen></HomeScreen>}></Route> */}
           <Route path="/" element={<Home></Home>}></Route>
+          <Route path="/cart" element={<CartScreen></CartScreen>}></Route>
           <Route path="/product/:slug" element={<ProductScreen ></ProductScreen>}></Route>
         </Routes>
       </Container>
