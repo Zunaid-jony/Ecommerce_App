@@ -7,8 +7,10 @@ import { Link } from 'react-router-dom';
 import { Button } from 'react-bootstrap';
 import axios from 'axios';
 // import axios from "axios";
+import { useNavigate } from 'react-router-dom';
 
 const CartScreen = () => {
+  const  navigate = useNavigate()
     const {state, dispatch: ctxDispatch} = useContext(Store)
     const{
         cart: {cartItems},
@@ -32,6 +34,11 @@ const CartScreen = () => {
       ctxDispatch({
         type: 'CART_REMOVE_ITEM',payload: item
       })
+
+    }
+
+    const checkoutHandler = () =>{
+      navigate('signin?redirect=/shipping')
 
     }
     return (
@@ -122,7 +129,10 @@ const CartScreen = () => {
                 </ListGroup.Item>
                 <ListGroup.Item>
                   <div className="d-grid">
+                    {/* button  */}
                     <Button
+
+                    onClick={checkoutHandler}
                       type="button"
                       variant="primary"
                       
