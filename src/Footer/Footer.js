@@ -3,7 +3,7 @@ import "./Footer.css";
 
 const Footer = () => {
   return (
-    <div className="footer" mb-1 style={{ marginBottom:'1%'}}>
+    <div className="footer-a" mb-1 style={{ marginBottom:'1%'}}>
       <div
         className="bg-dark text-white pt-5 pb-4  "
         style={{ backgroundColor: "rgb(29, 27, 24)" }}

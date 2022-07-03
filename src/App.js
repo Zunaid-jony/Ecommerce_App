@@ -11,6 +11,7 @@ import { useContext } from 'react';
 import { Store } from './Store';
 import CartScreen from './screens/CartScreen';
 import Footer from "./Footer/Footer";
+import SigninScreen from "./screens/SigninScreen";
 
 
 function App() {
@@ -21,7 +22,8 @@ function App() {
     <BrowserRouter>
     <div className="d-flex flex-column  site-container">
       <header>
-        <Navbar  variant="dark" style={{backgroundColor:'#4C4646'}}>
+        {/*  position:'fixed',width:'100%' */}
+        <Navbar className=""  variant="dark" style={{backgroundColor:'#4C4646'}}>
           <Container>
             <LinkContainer to="/">
               <Navbar.Brand>E-commarce </Navbar.Brand>
@@ -51,6 +53,7 @@ function App() {
           {/* <Route path="/" element={<HomeScreen></HomeScreen>}></Route> */}
           <Route path="/" element={<Home></Home>}></Route>
           <Route path="/cart" element={<CartScreen></CartScreen>}></Route>
+          <Route path="/signin" element={<SigninScreen></SigninScreen>}></Route>
           <Route path="/product/:slug" element={<ProductScreen ></ProductScreen>}></Route>
         </Routes>
       </Container>

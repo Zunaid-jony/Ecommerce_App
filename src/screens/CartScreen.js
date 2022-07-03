@@ -25,9 +25,7 @@ const CartScreen = () => {
         ctxDispatch({
           type: 'CART_ADD_ITEM',
           payload: { ...item, quantity },
-        });
-
-      
+        }); 
 
     }
     const removeItmHanler = (item) =>{
@@ -38,7 +36,7 @@ const CartScreen = () => {
     }
 
     const checkoutHandler = () =>{
-      navigate('signin?redirect=/shipping')
+      navigate('/signin?redirect=/shipping')
 
     }
     return (
