@@ -10,11 +10,12 @@ const SigninScreen = () => {
     const redirectInUrl = new URLSearchParams(search).get('redirect')
     const redirect = redirectInUrl ? redirectInUrl : '/';
     return (
-        <Container className='small-container'>
+       <div style={{width:'40%', marginLeft:'30%'}}>
+            <Container className='small-container'>
             <Helmet>
                 <title>Login</title>
             </Helmet>
-            <h1 className='my-3'> Login</h1>
+            <h1 className='my-3' style={{ textAlign: 'center'}}> Login</h1>
             <Form>
                 <Form.Group className='mb-3' controlId='email'>
                     <Form.Label>Email</Form.Label> 
@@ -26,7 +27,7 @@ const SigninScreen = () => {
                     <Form.Label>Password</Form.Label> 
                     <Form.Control type='passwoed' required></Form.Control>
                     <div className='mb-3'>
-                        <Button type="submit"> Login</Button>
+                        <Button type="submit"> Login.</Button>
                     </div>
                     <div className='mb-3'>
                         New Customer?{''}
@@ -38,6 +39,7 @@ const SigninScreen = () => {
             </Form>
             
         </Container>
+       </div>
     );
 };
 
