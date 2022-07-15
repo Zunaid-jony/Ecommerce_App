@@ -4,6 +4,15 @@ const Route = () => {
     return (
         <div>
             <h1>Thsi is route pages</h1>
+            <h1>Thsi is route pages</h1>
+            <h1>Thsi is route pages</h1>
+            <h1>Thsi is route pages</h1>
+            <h1>Thsi is route pages</h1>
+            <h1>Thsi is route pages</h1>
+            <h1>Thsi is route pages</h1>
+            <h1>Thsi is route pages</h1>
+            <h1>Thsi is route pages</h1>
+            <h1>Thsi is route pages</h1>
         </div>
     );
 };
